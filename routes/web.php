@@ -14,11 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PostsController;
 
 Route::get('/', [PagesController::class, 'index']);
 Route::get('/home', [PagesController::class, 'home']);
 Route::get('/about', [PagesController::class, 'about']);
 Route::get('/services', [PagesController::class, 'services']);
+Route::resource('posts', 'PostControllers');
 
 /*
 Route::get('/hello', function () {
